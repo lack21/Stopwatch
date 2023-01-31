@@ -1,0 +1,78 @@
+/* lear */
+/* Stopwatch */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: lightsalmon;
+}
+
+.blurred{
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+/* Main Content */
+.main-content{
+    width: 90%;
+    height: 100vh;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    place-content: center;
+
+    .title{
+        color: #fff;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+
+    .time{
+        font-size: 2rem;
+        color: #fff;
+        margin: 10vh 0;
+    }
+
+    .time-btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .start-btn, .stop-btn, .reset-btn{
+            padding: 1rem;
+            font-size: 1rem;
+            width: 160px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #fff;
+                color: lightsalmon;
+            }
+        }
+    }
+}
+
+/* For Mobile */
+@media screen and (max-width: 550px) {
+    .timer{
+        margin: 8vh 0 !important;
+    }
+
+    .time-btns{
+        flex-direction: column;
+
+        .start-btn, .stop-btn, .reset-btn{
+            width: 100% !important;
+        }
+    }
+}
